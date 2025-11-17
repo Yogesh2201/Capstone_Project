@@ -4,7 +4,7 @@
 
 This project performs **Exploratory Data Analysis (EDA)** on banking
 customer data to uncover **financial patterns**, **behavioral trends**,
-and **fraud indicators**.\
+and **fraud indicators**.
 The dataset contains detailed information about customer income, credit
 usage, loan history, and payment behavior---making it suitable for
 credit risk analysis and fraud detection.
@@ -13,9 +13,9 @@ credit risk analysis and fraud detection.
 
 ## 📂 Dataset Summary
 
--   **Total Records:** 54,618\
--   **Features:** 28\
--   **File Size:** \~11.7 MB
+-   **Total Records:** 10,000
+-   **Features:** 28
+-   **File Size:** ~29.3 MB
 
 ### 🔑 Key Columns
 
@@ -52,17 +52,17 @@ credit risk analysis and fraud detection.
 ## 🔍 Key Insights
 
 -   **High-risk indicators:**
-    -   Excessive delayed payments\
-    -   High outstanding debt\
-    -   Frequent credit limit changes\
-    -   Poor payment behavior\
+    -   Excessive delayed payments
+    -   High outstanding debt
+    -   Frequent credit limit changes
+    -   Poor payment behavior
 -   **Useful Categorical Features:** Occupation, Type_of_Loan,
-    Credit_Mix, Credit_Score\
+    Credit_Mix, Credit_Score
 -   **Potential Redundancies:**
-    -   Annual_Income vs Monthly_Inhand_Salary\
-    -   Num_of_Loan vs Type_of_Loan\
+    -   Annual_Income vs Monthly_Inhand_Salary
+    -   Num_of_Loan vs Type_of_Loan
 -   **Strong Predictors of Creditworthiness:** Credit History Age,
-    Credit Utilization Ratio\
+    Credit Utilization Ratio
 -   **Customer Profiling:** Based on income, age, occupation, and debt
     patterns
 
@@ -72,26 +72,26 @@ credit risk analysis and fraud detection.
 
 Steps completed:
 
--   Removed **duplicate rows**\
--   Identified and handled **missing values**\
--   Dropped irrelevant identifiers (`Name`, `SSN`)\
+-   Removed **duplicate rows**
+-   Identified and handled **missing values**
+-   Dropped irrelevant identifiers (`Name`, `SSN`)
 -   Standardized inconsistent rules (e.g., `NM → No` in
     Payment_of_Min_Amount)\
--   Converted necessary float columns to **integers**\
--   Rounded monetary values to **2 decimal places**\
+-   Converted necessary float columns to **integers**
+-   Rounded monetary values to **2 decimal places**
 -   Added new engineered features:
-    -   **Income_per_Account = Annual_Income / Num_Bank_Accounts**\
-    -   **Credit_Score_Level = High/Low** (threshold 700)\
+    -   **Income_per_Account = Annual_Income / Num_Bank_Accounts**
+    -   **Credit_Score_Level = High/Low** (threshold 700)
 -   Exported final version → `cleaned_data_final.csv`
 
 ------------------------------------------------------------------------
 
 ## 📈 Post-Cleaning Insights
 
--   Dataset is now **fully ready for analytics and modeling**\
--   Clean categorical labels → improved consistency\
--   Numeric columns aligned and standardized\
--   Engineered features enhance **predictive modeling potential**\
+-   Dataset is now **fully ready for analytics and modeling**
+-   Clean categorical labels → improved consistency
+-   Numeric columns aligned and standardized
+-   Engineered features enhance **predictive modeling potential**
 -   Data quality significantly improved for fraud risk models
 
 ------------------------------------------------------------------------
@@ -99,14 +99,14 @@ Steps completed:
 ## 🚀 Next Steps
 
 -   Generate detailed **EDA visualizations**
-    -   Distribution plots\
-    -   Outlier detection\
-    -   Correlation heatmaps\
+    -   Distribution plots
+    -   Outlier detection
+    -   Correlation heatmaps
 -   Apply additional feature engineering
-    -   Debt-to-Income Ratio\
-    -   Credit Efficiency Score\
+    -   Debt-to-Income Ratio
+    -   Credit Efficiency Score
 -   Train **fraud detection ML models**
-    -   Logistic Regression\
+    -   Logistic Regression
     -   Random Forest\
     -   XGBoost\
 -   Deploy findings in an interactive **dashboard** for real-time
@@ -116,17 +116,17 @@ Steps completed:
 
 ## 📁 Repository Structure (Suggested)
 
-    banking-fraud-eda/
+    banking-fraud-eda
     │
-    ├── data/
+    ├── data
     │   ├── raw_data.csv
     │   └── cleaned_data_final.csv
     │
-    ├── notebooks/
+    ├── notebooks
     │   ├── 01_data_cleaning.ipynb
     │   └── 02_EDA.ipynb
     │
-    ├── src/
+    ├── src
     │   ├── preprocessing.py
     │   └── fraud_model.py
     │
@@ -138,6 +138,6 @@ Steps completed:
 ## ⭐ Conclusion
 
 This project lays a complete foundation for financial **EDA**, **credit
-risk evaluation**, and **fraud detection modeling**.\
+risk evaluation**, and **fraud detection modeling**.
 It provides a structured approach for understanding customer behavior
 and identifying high-risk cases based on data-driven insights.
