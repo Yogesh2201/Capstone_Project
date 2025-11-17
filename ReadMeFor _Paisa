@@ -1,0 +1,86 @@
+# 📊 Banking Data EDA & Fraud Detection
+
+## 📌 Project Overview
+This project focuses on **Exploratory Data Analysis (EDA)** of banking data to identify **patterns, trends, and potential fraud risks**.  
+The dataset includes financial and behavioral information about customers, which can be used to assess **creditworthiness** and detect **anomalies** that may indicate fraudulent activities.
+
+---
+
+## 📂 Dataset Information
+- **Number of Records:** 54,618  
+- **Number of Columns:** 28  
+- **File Size:** ~11.7 MB  
+
+### 🔑 Key Columns
+| Column Name | Data Type | Description |
+|-------------|-----------|-------------|
+| ID | int64 | Unique transaction identifier |
+| Customer_ID | int64 | Unique identifier for customers |
+| Age | float64 | Age of the customer |
+| Occupation | object | Occupation type |
+| Annual_Income | float64 | Yearly income of the customer |
+| Num_Bank_Accounts | float64 | Number of active bank accounts |
+| Num_Credit_Card | float64 | Number of credit cards held |
+| Num_of_Loan | float64 | Number of loans taken |
+| Delay_from_due_date | float64 | Days delayed in payment |
+| Num_of_Delayed_Payment | float64 | Total number of delayed payments |
+| Changed_Credit_Limit | float64 | Frequency of credit limit changes |
+| Outstanding_Debt | float64 | Amount of outstanding debt |
+| Credit_Utilization_Ratio | float64 | Credit utilization percentage |
+| Credit_History_Age | float64 | Age of credit history in years |
+| Payment_Behaviour | object | Behavioral description of payment habits |
+| Credit_Score | object | Credit score category (e.g., High/Low) |
+
+---
+
+## 🎯 Objectives
+- ✅ Understand the data structure and ensure its integrity  
+- ✅ Analyze financial patterns and behavioral trends  
+- ✅ Detect and visualize anomalies or patterns indicative of fraud  
+- ✅ Derive actionable insights to assist in fraud detection  
+
+---
+
+## 🔍 Key Insights
+- **Diverse Financial Information:** Rich mix of income, loans, debt, and payment behavior.  
+- **Fraud Indicators:** Features like `Num_of_Delayed_Payment`, `Outstanding_Debt`, `Changed_Credit_Limit`, and `Payment_Behaviour` are strong signals of risk.  
+- **Categorical Data:** Columns such as `Occupation`, `Type_of_Loan`, `Credit_Mix`, and `Credit_Score` require encoding for ML models.  
+- **Potential Redundancies:** `Annual_Income` vs `Monthly_Inhand_Salary`, `Num_of_Loan` vs `Type_of_Loan`.  
+- **Credit Score Insights:** Crucial for identifying risky customers.  
+- **Customer Profiles:** Built using `Age`, `Occupation`, `Annual_Income`, and `Credit_History_Age`.  
+
+---
+
+## 🛠️ Data Wrangling Steps
+- Removed **duplicate records**  
+- Checked for **missing values**  
+- Dropped **irrelevant identifiers** (`Name`, `SSN`)  
+- Cleaned **Payment_of_Min_Amount** column (`NM → No`)  
+- Converted selected **float columns to integers** (`Num_Bank_Accounts`, `Age`, `Num_Credit_Inquiries`, `Annual_Income`)  
+- Rounded monetary/ratio columns to **2 decimal places**  
+- Engineered new features:
+  - `Income_per_Account` = Annual_Income ÷ Num_Bank_Accounts  
+  - `Credit_Score_Level` = High/Low classification based on threshold (>700)  
+- Exported cleaned dataset → **`cleaned_data_final.csv`**
+
+---
+
+## 📈 Insights After Cleaning
+- Dataset is **analysis-ready** (no duplicates, no missing values).  
+- **Categorical variables standardized**, reducing ambiguity.  
+- **Numeric features consistent**, enabling accurate statistical and predictive modeling.  
+- Engineered features add **business value** for fraud detection and customer profiling.  
+
+---
+
+## 🚀 Next Steps
+- Perform **EDA visualizations** (distribution plots, correlation heatmaps, fraud risk indicators).  
+- Apply **feature engineering** (Debt-to-Income Ratio, Credit Usage Ratio).  
+- Build **predictive models** for fraud detection using ML algorithms.  
+- Deploy insights into a **dashboard** for real-time monitoring.  
+
+---
+
+## 📜 License
+This project is for **educational and research purposes**.  
+Feel free to fork and adapt for your own analysis.
